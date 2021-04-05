@@ -9,7 +9,7 @@ export default function Home() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Fumblr</title>
         <link rel="icon" href="/favicon.ico" />
