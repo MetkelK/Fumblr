@@ -22,6 +22,7 @@ nav {
   align-items: center;
   width: 100%;
   padding: 1rem 1rem 0;
+  margin-bottom: 5rem;
 }
 
 nav h1 {
@@ -29,8 +30,12 @@ nav h1 {
 }
 
 form {
+  padding-bottom: 3rem;
   margin: 0;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 label input {
@@ -40,20 +45,28 @@ label input {
 }
 
 label {
-  display: block;
-  width: 37px;
-  height: 37px;
-  border: 1px solid #000;
-  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  /* border: 1px solid #000; */
+  /* border-radius: 50%; */
   margin: 0;
-  line-height: 30px;
+  /* line-height: 30px; */
   color: #000;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 2rem;
 }
 label:hover {
-  background: #efb6b2;
+  background: #000;
   color: white;
+}
+
+.error {
+  margin: 0;
+  padding: 1rem 0;
+  text-align: center;
 }
 
 main {
@@ -127,7 +140,7 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
