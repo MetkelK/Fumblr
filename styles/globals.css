@@ -14,3 +14,129 @@ a {
 * {
   box-sizing: border-box;
 }
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 1rem 0;
+}
+
+nav h1 {
+  margin: 0;
+}
+
+form {
+  margin: 0;
+  text-align: center;
+}
+
+label input {
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+label {
+  display: block;
+  width: 37px;
+  height: 37px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  margin: 0;
+  line-height: 30px;
+  color: #000;
+  font-weight: bold;
+  font-size: 24px;
+}
+label:hover {
+  background: #efb6b2;
+  color: white;
+}
+
+main {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.output {
+  height: 60px;
+  font-size: 0.8rem;
+}
+
+.progressBar {
+  height: 5px;
+  background: #efb6b2;
+  margin-top: 20px;
+}
+
+.img-grid {
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+}
+
+@media all and (min-width: 576px) {
+  .img-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .img-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .img-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .img-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+.img-wrap {
+  overflow: hidden;
+  height: 0;
+  padding: 50% 0;
+  /* padding controls height, will always be perfectly square regardless of width */
+  position: relative;
+  opacity: 0.8;
+}
+.img-wrap img {
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 150%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* modal styles */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.backdrop img {
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  margin: 60px auto;
+  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
+  border: 3px solid white;
+}
