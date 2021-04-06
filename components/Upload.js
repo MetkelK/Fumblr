@@ -26,7 +26,6 @@ const Upload = () => {
     <form>
       <label>
         <input type="file" onChange={uploadFile} />
-        {/* <span>+</span> */}
         <FontAwesomeIcon icon={faArrowUp}></FontAwesomeIcon>
       </label>
       <div>
