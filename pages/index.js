@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
+
 import Upload from "../components/Upload";
 import ImageGrid from "../components/ImageGrid";
 import Modal from "../components/Modal";
@@ -13,6 +13,7 @@ export default function Home() {
       <Head>
         <title>Fumblr</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Fake Tumblr"></meta>
       </Head>
       <main>
         <Upload />

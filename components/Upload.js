@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ProgressBar from "./ProgressBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import the FontAwesomeIcon component
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons"; // import the icons you need
@@ -25,7 +25,7 @@ const Upload = () => {
   return (
     <form>
       <label>
-        <input type="file" onChange={uploadFile} />
+        <input type="file" onChange={uploadFile} aria-label="upload image" />
         <FontAwesomeIcon icon={faArrowUp}></FontAwesomeIcon>
       </label>
       <div>
