@@ -57,7 +57,9 @@ label {
   color: #000;
   font-weight: bold;
   font-size: 2rem;
+  transition: 0.15s;
 }
+
 label:hover {
   background: #000;
   color: white;
@@ -123,7 +125,13 @@ main {
   /* padding controls height, will always be perfectly square regardless of width */
   position: relative;
   opacity: 0.7;
+  transition: 0.15s;
 }
+
+.img-wrap:hover {
+  opacity: 1;
+}
+
 .img-wrap img {
   min-width: 100%;
   min-height: 100%;
