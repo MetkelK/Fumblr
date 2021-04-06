@@ -1,5 +1,5 @@
 import React from "react";
-// import Image from "next/image";
+
 import useFirestore from "../hooks/useFirestore";
 
 const ImageGrid = ({ setSelectedImage }) => {
@@ -14,7 +14,7 @@ const ImageGrid = ({ setSelectedImage }) => {
             key={doc.id}
             onClick={() => setSelectedImage(doc.url)}
           >
-            <img src={doc.url} alt={doc.id} />
+            <img src={doc.url} alt="uploaded pic" />
           </div>
         ))}
     </div>
