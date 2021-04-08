@@ -4,7 +4,7 @@ import useFirestore from "../hooks/useFirestore";
 
 const ImageGrid = ({ setSelectedImage }) => {
   const { docs } = useFirestore("images");
-  console.log(docs);
+
   return (
     <div className="img-grid">
       {docs &&
@@ -14,13 +14,7 @@ const ImageGrid = ({ setSelectedImage }) => {
             key={doc.id}
             onClick={() => setSelectedImage(doc.url)}
           >
-            <img
-              src={doc.url}
-              alt={doc.id}
-              // width={200}
-              // height={200}
-              layout="fill"
-            />
+            <img src={doc.url} alt={doc.id} layout="fill" />
           </div>
         ))}
     </div>

@@ -7,7 +7,7 @@ const Upload = () => {
   const [file, setFile] = useState(null);
   const [error, setError] = useState(null);
 
-  const allowedTypes = ["image/png", "image/jpeg"];
+  const allowedTypes = ["image/png", "image/jpeg", "image/gif"];
 
   const uploadFile = (e) => {
     let selectedFile = e.target.files[0];
