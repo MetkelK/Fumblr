@@ -11,7 +11,10 @@ const useStorage = (file) => {
   const [url, setUrl] = useState(null);
 
   useEffect(() => {
+    //Create a reference to files in storage
     const storageRef = projectStorage.ref(file.name);
+
+    //Create a collection of storage data
     const collectionRef = projectFirestore.collection("images");
 
     storageRef.put(file).on(
