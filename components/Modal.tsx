@@ -1,5 +1,10 @@
-const Modal = ({ selectedImage, setSelectedImage }) => {
-  const handleClick = (e) => {
+interface ImageProps {
+  selectedImage: any,
+  setSelectedImage: any
+}
+
+const Modal = ({ selectedImage, setSelectedImage }: ImageProps) => {
+  const handleClick = (e:any) => {
     if (e.target.classList.contains("backdrop")) {
       setSelectedImage(null);
     }

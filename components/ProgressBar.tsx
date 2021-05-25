@@ -1,7 +1,11 @@
 import { useEffect } from "react";
 import useStorage from "../hooks/useStorage";
 
-const ProgressBar = ({ file, setFile }) => {
+interface FileProps {
+  file: any,
+  setFile: any
+}
+const ProgressBar = ({ file, setFile }:FileProps) => {
   const { url, progress } = useStorage(file);
 
   useEffect(() => {

@@ -5,8 +5,13 @@ import Upload from "../components/Upload";
 import ImageGrid from "../components/ImageGrid";
 import Modal from "../components/Modal";
 
+interface ImageProps {
+  selectedImage: string,
+  setSelectedImage: any
+}
+
 export default function Home() {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState<ImageProps | null>(null);
 
   return (
     <div>

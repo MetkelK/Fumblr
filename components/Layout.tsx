@@ -1,6 +1,11 @@
+import { ReactNode } from "react";
 import Upload from "./Upload";
 
-const Layout = ({ children }) => {
+interface Images {
+  children: ReactNode
+}
+
+const Layout = ({ children }:Images) => {
   return (
     <div>
       <nav>

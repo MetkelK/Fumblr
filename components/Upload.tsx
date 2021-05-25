@@ -5,17 +5,17 @@ import { faArrowUp } from "@fortawesome/free-solid-svg-icons"; // import the ico
 
 const Upload = () => {
   const [file, setFile] = useState(null);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState("");
 
   const allowedTypes = ["image/png", "image/jpeg", "image/gif"];
 
-  const uploadFile = (e) => {
+  const uploadFile = (e:any) => {
     let selectedFile = e.target.files[0];
     console.log(selectedFile);
 
     if (selectedFile && allowedTypes.includes(selectedFile.type)) {
       setFile(selectedFile);
-      setError("");
+      setError(" ");
     } else {
       setFile(null);
       setError("Please select a valid image file");
