@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import the 
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons"; // import the icons you need
 
 const Upload = () => {
-  const [file, setFile] = useState(null);
+  const [file, setFile] = useState<any | null>(null);
   const [error, setError] = useState("");
 
   const allowedTypes = ["image/png", "image/jpeg", "image/gif"];
