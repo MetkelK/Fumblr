@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { projectFirestore } from "../firebase/config";
 
-const useFirestore = (collection) => {
+const useFirestore = (collection:any) => {
   const [docs, setDocs] = useState([]);
 
   useEffect(() => {
@@ -9,7 +9,7 @@ const useFirestore = (collection) => {
       .collection(collection)
       .orderBy("createdAt", "desc")
       .onSnapshot((snap) => {
-        let documents = [];
+        let documents:any = [];
         snap.forEach((doc) => {
           documents.push({ ...doc.data(), id: doc.id });
         });

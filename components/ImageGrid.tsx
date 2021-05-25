@@ -1,12 +1,6 @@
-import Image from "next/image";
-
 import useFirestore from "../hooks/useFirestore";
 
-interface ImageProps {
-  setSelectedImage: any
-}
-
-const ImageGrid = ({ setSelectedImage }:ImageProps) => {
+const ImageGrid = ({ setSelectedImage }:any) => {
   const { docs } = useFirestore("images");
 
   return (

@@ -5,10 +5,10 @@ import {
   timestamp,
 } from "../firebase/config";
 
-const useStorage = (file) => {
-  const [progress, setProgress] = useState(0);
-  const [error, setError] = useState(null);
-  const [url, setUrl] = useState(null);
+const useStorage = (file:any) => {
+  const [progress, setProgress] = useState<number | 0>(0);
+  const [error, setError] = useState<any | null>(null);
+  const [url, setUrl] = useState<string | null>(null);
 
   useEffect(() => {
     //Create a reference to files in storage
