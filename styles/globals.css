@@ -152,11 +152,38 @@ main {
   align-items: center;
   justify-content: center;
 }
-.backdrop img {
+
+.backdrop-image {
   display: block;
+  position: relative;
+  padding: 48%;
   max-width: 95%;
   max-height: 95%;
   margin: 60px auto;
-  box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5);
-  border: 3px solid white;
+  /* box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.5); */
+  /* border: 3px solid white; */
+}
+
+@media all and (min-width: 576px) {
+  .backdrop-image {
+    padding: 45%;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .backdrop-image {
+    padding: 40%;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .backdrop-image {
+    padding: 35%;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .backdrop-image {
+    padding: 30%;
+  }
 }
