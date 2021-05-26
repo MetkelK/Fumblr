@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const Modal = ({ selectedImage, setSelectedImage }: any) => {
   const handleClick = (e:any) => {
     if (e.target.classList.contains("backdrop")) {

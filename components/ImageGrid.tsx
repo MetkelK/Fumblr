@@ -1,4 +1,5 @@
 import useFirestore from "../hooks/useFirestore";
+import Image from 'next/image'
 
 const ImageGrid = ({ setSelectedImage }:any) => {
   const { docs } = useFirestore("images");
@@ -12,7 +13,7 @@ const ImageGrid = ({ setSelectedImage }:any) => {
             key={doc.id}
             onClick={() => setSelectedImage(doc.url)}
           >
-            <img src={doc.url} alt={doc.id} />
+            <Image src={doc.url} alt={doc.id} layout="fill" quality={100} sizes="25vw, 50vw, 75vw, 100vw" />
           </div>
         ))}
     </div>

@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import Upload from "./Upload";
 
 interface Images {
   children: ReactNode
