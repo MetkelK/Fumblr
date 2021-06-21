@@ -120,9 +120,6 @@ main {
 
 .img-wrap {
   overflow: hidden;
-  height: 0;
-  padding: 50% 0;
-  /* padding controls height, will always be perfectly square regardless of width */
   position: relative;
   opacity: 0.7;
   transition: 0.15s;
