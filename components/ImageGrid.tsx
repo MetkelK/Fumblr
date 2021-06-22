@@ -6,14 +6,7 @@ const ImageGrid = ({ setSelectedImage }: any) => {
 
   return (
     <div className="img-grid">
-      {/* {docs &&
-        docs.map((doc:any) => ( */}
-      <div
-        className="img-wrap"
-        // key={doc.id}
-        // onClick={() => setSelectedImage(doc.url)}
-      >
-        {/* <Image src={doc.url} alt={doc.id} layout="fill" quality={100} sizes="25vw, 50vw, 75vw, 100vw" /> */}
+      <div className="img-wrap">
         <Image
           src="/alona-perez-p4xNF5ZPc0c-unsplash.jpg"
           onClick={() =>
@@ -25,6 +18,7 @@ const ImageGrid = ({ setSelectedImage }: any) => {
           priority
         />
       </div>
+
       <div className="img-wrap">
         <Image
           src="/barna-bartis-pzB5wnhg8F0-unsplash.jpg"
@@ -191,8 +185,6 @@ const ImageGrid = ({ setSelectedImage }: any) => {
           priority
         />
       </div>
-
-      {/* ))} */}
     </div>
   );
 };
