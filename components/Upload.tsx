@@ -1,15 +1,15 @@
 import { useState } from "react";
 import ProgressBar from "./ProgressBar";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import the FontAwesomeIcon component
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons"; // import the icons you need
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 const Upload = () => {
   const [file, setFile] = useState<any | null>(null);
-  const [error, setError] = useState("");
+  const [error, setError] = useState<string | null>(null);
 
   const allowedTypes = ["image/png", "image/jpeg", "image/gif"];
 
-  const uploadFile = (e:any) => {
+  const uploadFile = (e: any) => {
     let selectedFile = e.target.files[0];
     console.log(selectedFile);
 
