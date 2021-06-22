@@ -90,31 +90,33 @@ main {
 .img-grid {
   margin: 20px auto;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(1, 1fr);
   grid-gap: 10px;
+
+  width: 100%;
 }
 
 @media all and (min-width: 576px) {
   .img-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media all and (min-width: 768px) {
   .img-grid {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media all and (min-width: 992px) {
   .img-grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media all and (min-width: 1200px) {
   .img-grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
@@ -125,19 +127,12 @@ main {
   position: relative;
   opacity: 0.7;
   transition: 0.15s;
+  width: 40vmin;
+  height: 40vmin;
 }
 
 .img-wrap:hover {
   opacity: 1;
-}
-
-.img-wrap img {
-  min-width: 100%;
-  min-height: 100%;
-  max-width: 150%;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 /* modal styles */

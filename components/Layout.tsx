@@ -1,10 +1,10 @@
 import { ReactNode } from "react";
 
 interface Images {
-  children: ReactNode
+  children: ReactNode;
 }
 
-const Layout = ({ children }:Images) => {
+const Layout = ({ children }: Images) => {
   return (
     <div>
       <nav>
