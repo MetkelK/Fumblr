@@ -5,9 +5,9 @@ import useFirestore from "../hooks/useFirestore";
 
 // https://github.com/testing-library/react-testing-library/issues/422
 jest.mock("../hooks/useFirestore", () =>
-  jest.fn(() => {
-    docs: [];
-  })
+  jest.fn(() => ({
+    docs: [],
+  }))
 );
 
 describe("ImageGrid", () => {
