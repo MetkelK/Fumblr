@@ -197,3 +197,27 @@ main {
     padding: 30%;
   }
 }
+
+.close {
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  transition: 0.15s;
+  background-color: #000;
+  opacity: 0.25;
+  width: 5vmin;
+  height: 5vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close:hover,
+.close:focus {
+  opacity: 0.9;
+  text-decoration: none;
+  cursor: pointer;
+}
