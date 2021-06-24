@@ -19,13 +19,15 @@ describe("Modal", () => {
 
   it("Checks modal closes with escape button", () => {
     render(<Modal selectedImage={"/"} />);
-    const escape = fireEvent.click(screen.getByText("×"));
-    expect(escape).not.toBeVisible;
+    fireEvent.click(screen.getByText("×"));
+    const modal = screen.getByLabelText("background");
+    expect(modal).not.toBeVisible;
   });
 
   it("Checks modal closes by clicking outside of modal area", () => {
     render(<Modal selectedImage={"/"} />);
-    const escapeArea = fireEvent.click(screen.getByLabelText("background"));
-    expect(escapeArea).not.toBeVisible;
+    fireEvent.click(screen.getByLabelText("background"));
+    const modal = screen.getByLabelText("background");
+    expect(modal).not.toBeVisible;
   });
 });

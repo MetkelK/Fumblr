@@ -9,6 +9,7 @@ const Modal = ({ selectedImage, setSelectedImage }: any) => {
       setSelectedImage(null);
     }
   };
+
   return (
     <div className="backdrop" aria-label="background" onClick={handleClick}>
       <div className="backdrop-image">
