@@ -3,7 +3,6 @@ import ProgressBar from "./ProgressBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
-// node_modules/@types/react
 const Upload = () => {
   const [file, setFile] = useState<any | null>(null);
   const [error, setError] = useState<string | null>(null);
