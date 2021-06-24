@@ -1,14 +1,14 @@
 import React from "react";
 import Modal from "./Modal";
-import { render, screen } from "@testing-library/react";
+import { fireEvent, getByText, render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
 describe("Modal", () => {
-  it("Renders Modal and displays data", () => {
+  it("Renders Modal", () => {
     render(<Modal selectedImage={"/"} />);
   });
 
-  it("Checks image is loaded", () => {
+  it("Renders modal with image loaded", () => {
     render(<Modal selectedImage={"/alona-perez-p4xNF5ZPc0c-unsplash.jpg"} />);
     const image = screen.getByRole("img");
     expect(image).toHaveAttribute(
@@ -17,11 +17,15 @@ describe("Modal", () => {
     );
   });
 
-  //   it("Checks modal closes with escape button", () => {
+  it("Checks modal closes with escape button", () => {
+    render(<Modal selectedImage={"/"} />);
+    const escape = fireEvent.click(screen.getByText("×"));
+    expect(escape).not.toBeVisible;
+  });
 
-  //   })
-
-  //   it("Checks modal closes by clicking outside of modal area", () => {
-
-  //   })
+  it("Checks modal closes by clicking outside of modal area", () => {
+    render(<Modal selectedImage={"/"} />);
+    const escapeArea = fireEvent.click(screen.getByLabelText("background"));
+    expect(escapeArea).not.toBeVisible;
+  });
 });
