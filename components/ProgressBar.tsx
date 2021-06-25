@@ -21,7 +21,13 @@ const ProgressBar = ({
     }
   }, [url, setFile]);
 
-  return <div className="progressBar" style={{ width: progress + "%" }}></div>;
+  return (
+    <div
+      className="progressBar"
+      aria-label="progressBar"
+      style={{ width: progress + "%" }}
+    ></div>
+  );
 };
 
 export default ProgressBar;
