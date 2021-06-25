@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 const Upload = () => {
-  const [file, setFile] = useState<any | null>(null);
+  const [file, setFile] = useState<File | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const allowedTypes = ["image/png", "image/jpeg", "image/gif"];
