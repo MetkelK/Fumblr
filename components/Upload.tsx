@@ -29,8 +29,12 @@ const Upload = () => {
         <FontAwesomeIcon icon={faArrowUp}></FontAwesomeIcon>
       </label>
       <div>
-        {error && <p className="error">{error}</p>}
-        {file && <p>{file.name}</p>}
+        {error && (
+          <p className="error" aria-label="error message">
+            {error}
+          </p>
+        )}
+        {file && <p aria-label="file name">{file.name}</p>}
         {file && <ProgressBar file={file} setFile={setFile} />}
       </div>
     </form>
