@@ -5,7 +5,7 @@ import { render, screen } from "@testing-library/react";
 const file = new File(["sunset-june-23"], "sunset.png", { type: "image/png" });
 
 describe("Progress", () => {
-  it("loads the progress bar", () => {
+  it("renders the progress bar", () => {
     render(<ProgressBar file={file} setFile={jest.fn()} />);
   });
 
