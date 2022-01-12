@@ -184,13 +184,13 @@ main {
 
 @media all and (min-width: 992px) {
   .backdrop-image {
-    padding: 38%;
+    padding: 30%;
   }
 }
 
 @media all and (min-width: 1200px) {
   .backdrop-image {
-    padding: 36%;
+    padding: 20%;
   }
 }
 
