@@ -191,6 +191,7 @@ main {
 @media all and (min-width: 1200px) {
   .backdrop-image {
     padding: 30%;
+    max-height: 95%;
   }
 }
 
