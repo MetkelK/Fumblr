@@ -184,16 +184,15 @@ main {
 
 @media all and (min-width: 992px) {
   .backdrop-image {
-    padding: 35%;
+    padding: 38%;
   }
 }
 
-/* @media all and (min-width: 1200px) {
+@media all and (min-width: 1200px) {
   .backdrop-image {
-    padding: 30%;
-    max-height: 95%;
+    padding: 36%;
   }
-} */
+}
 
 .close {
   color: #fff;
