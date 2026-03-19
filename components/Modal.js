@@ -18,9 +18,9 @@ const Modal = ({ selectedImage, setSelectedImage }) => {
         <Image
           src={selectedImage}
           alt="enlarged pic"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
+          fill
+          sizes="100vw"
+          className="object-cover"
           priority
         />
       </div>

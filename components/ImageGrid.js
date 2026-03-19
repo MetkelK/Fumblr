@@ -17,8 +17,9 @@ const ImageGrid = ({ setSelectedImage }) => {
             <Image
               src={doc.url}
               alt={doc.id}
-              layout="fill"
-              objectFit="cover"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="object-cover"
               priority
             />
           </div>

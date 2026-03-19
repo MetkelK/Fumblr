@@ -87,6 +87,11 @@ main {
   margin-top: 20px;
 }
 
+.object-cover {
+  object-fit: cover;
+  object-position: center;
+}
+
 .img-grid {
   margin: 20px auto;
   display: grid;

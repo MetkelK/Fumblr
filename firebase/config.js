@@ -1,11 +1,10 @@
-import firebase from "firebase/app";
-import "firebase/storage";
-import "firebase/firestore";
-import "firebase/auth";
+import { initializeApp } from "firebase/app";
+import { getStorage } from "firebase/storage";
+import { getFirestore, serverTimestamp } from "firebase/firestore";
 
 // Firebase configuration
-var firebaseConfig = {
-  apiKey: process.env.API_KEY,
+const firebaseConfig = {
+  apiKey: process.env.NEXT_PUBLIC_API_KEY,
   authDomain: "fumblr-a43b3.firebaseapp.com",
   projectId: "fumblr-a43b3",
   storageBucket: "fumblr-a43b3.appspot.com",
@@ -14,14 +13,10 @@ var firebaseConfig = {
 };
 
 // Initialize Firebase
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-} else {
-  firebase.app();
-}
+const app = initializeApp(firebaseConfig);
 
-const projectStorage = firebase.storage();
-const projectFirestore = firebase.firestore();
-const timestamp = firebase.firestore.FieldValue.serverTimestamp;
+const projectStorage = getStorage(app);
+const projectFirestore = getFirestore(app);
+const timestamp = serverTimestamp;
 
 export { projectStorage, projectFirestore, timestamp };
