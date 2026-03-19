@@ -146,7 +146,7 @@ main {
 }
 
 .object-cover {
-  object-fit: fill;
+  object-fit: cover;
   object-position: center;
 }
 
