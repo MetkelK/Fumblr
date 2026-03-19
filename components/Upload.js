@@ -1,7 +1,8 @@
 import { useState } from "react";
+import imageCompression from "browser-image-compression";
 import ProgressBar from "./ProgressBar";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import the FontAwesomeIcon component
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons"; // import the icons you need
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 const Upload = () => {
   const [file, setFile] = useState(null);
@@ -9,16 +10,30 @@ const Upload = () => {
 
   const allowedTypes = ["image/png", "image/jpeg", "image/gif"];
 
-  const uploadFile = (e) => {
+  const uploadFile = async (e) => {
     let selectedFile = e.target.files[0];
-    console.log(selectedFile);
 
-    if (selectedFile && allowedTypes.includes(selectedFile.type)) {
-      setFile(selectedFile);
-      setError("");
-    } else {
+    if (!selectedFile) return;
+
+    if (!allowedTypes.includes(selectedFile.type)) {
       setFile(null);
       setError("Please select a valid image file");
+      return;
+    }
+
+    try {
+      const options = {
+        maxSizeMB: 5,
+        maxWidthOrHeight: 1920,
+        useWebWorker: true,
+      };
+
+      const compressedFile = await imageCompression(selectedFile, options);
+      setFile(compressedFile);
+      setError("");
+    } catch (err) {
+      setError("Error compressing image. Please try again.");
+      setFile(null);
     }
   };
 

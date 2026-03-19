@@ -12,7 +12,7 @@ const Modal = ({ selectedImage, setSelectedImage }) => {
   return (
     <div className="backdrop" onClick={handleClick}>
       <div className="backdrop-image">
-        <span className="close" onClick={() => handleClick}>
+        <span className="close" onClick={(e) => handleClick(e)}>
           &times;
         </span>
         <Image
