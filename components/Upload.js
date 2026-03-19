@@ -12,6 +12,7 @@ const Upload = () => {
 
   const uploadFile = async (e) => {
     let selectedFile = e.target.files[0];
+    console.log("File selected:", selectedFile);
 
     if (!selectedFile) return;
 
@@ -22,16 +23,20 @@ const Upload = () => {
     }
 
     try {
+      console.log("Starting compression...");
       const options = {
         maxSizeMB: 5,
         maxWidthOrHeight: 1920,
-        useWebWorker: true,
+        useWebWorker: false,
       };
 
       const compressedFile = await imageCompression(selectedFile, options);
+      console.log("Compression done:", compressedFile);
+      compressedFile.name = selectedFile.name;
       setFile(compressedFile);
       setError("");
     } catch (err) {
+      console.error("Error:", err);
       setError("Error compressing image. Please try again.");
       setFile(null);
     }

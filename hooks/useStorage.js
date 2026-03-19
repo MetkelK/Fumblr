@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import { v4 as uuidv4 } from "uuid";
 import { projectStorage, projectFirestore } from "../firebase/config";
 
 const useStorage = (file) => {
@@ -10,11 +9,11 @@ const useStorage = (file) => {
   const [url, setUrl] = useState(null);
 
   useEffect(() => {
-    if (!file || !file.name) return;
+    if (!file) return;
 
-    // Create a unique file name using UUID
+    // Create a unique file name
     const fileExtension = file.name.split(".").pop();
-    const uniqueFileName = `${uuidv4()}.${fileExtension}`;
+    const uniqueFileName = `${Date.now()}_${Math.random().toString(36).substr(2, 9)}.${fileExtension}`;
     const storageRef = ref(projectStorage, uniqueFileName);
 
     // Upload file
