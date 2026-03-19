@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
-import { getStorage } from "firebase/storage";
 import { getFirestore, serverTimestamp } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
+import { getAuth } from "firebase/auth";
 
 // Firebase configuration
 const firebaseConfig = {
@@ -15,8 +16,10 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-const projectStorage = getStorage(app);
+// Initialize services
 const projectFirestore = getFirestore(app);
-const timestamp = serverTimestamp;
+const projectStorage = getStorage(app);
+const projectAuth = getAuth(app); // Initialize Auth
 
-export { projectStorage, projectFirestore, timestamp };
+// Export as NAMED exports
+export { projectFirestore, projectStorage, projectAuth, serverTimestamp };
